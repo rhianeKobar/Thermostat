@@ -1,6 +1,8 @@
 ## Thermostat
-
 ---
+
+An application that mimics a thermostat
+
 ### User Stories
 
 As as user <br>
