@@ -16,5 +16,12 @@ describe("Thermostat", function(){
 		thermostat.down()
 		expect(thermostat.temperature).toEqual(19)
   });
+
+	it("shouldn't allow the temperature to drop below 10", function(){
+		for(let i = 12; i > 0; i--){
+			thermostat.down()
+		}
+		expect(thermostat.temperature).toEqual(10)
+  });
 }); 
 
