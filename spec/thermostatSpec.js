@@ -23,5 +23,10 @@ describe("Thermostat", function(){
 		}
 		expect(thermostat.temperature).toEqual(10)
   });
+
+  it("should be 25 degrees if power save is on", function(){
+		expect(thermostat.maxTemp).toEqual(25)
+  });
+
 }); 
 
