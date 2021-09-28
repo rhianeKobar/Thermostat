@@ -19,14 +19,20 @@ describe("Thermostat", function(){
 
 	it("shouldn't allow the temperature to drop below 10", function(){
 		for(let i = 12; i > 0; i--){
-			thermostat.down()
+			thermostat.down();
 		}
-		expect(thermostat.temperature).toEqual(10)
+		expect(thermostat.temperature).toEqual(10);
   });
 
   it("should be 25 degrees if power save is on", function(){
-		expect(thermostat.maxTemp).toEqual(25)
+		expect(thermostat.maxTemp).toEqual(25);
   });
+
+	it("should be 32 degrees if power save is off", function(){
+		thermostat.switchPowerSave();
+		expect(thermostat.maxTemp).toEqual(32);
+  });
+
 
 }); 
 

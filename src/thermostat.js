@@ -16,4 +16,14 @@ class Thermostat {
 			 this.temperature = this.temperature - 1
 		}
 	}
+
+	switchPowerSave(){
+		if (this.powerSave == true){
+			this.powerSave = false;
+			this.maxTemp = 32;
+		}else{
+			this.powerSave = true;
+			this.maxTemp = 25;
+		}
+	}
 }
