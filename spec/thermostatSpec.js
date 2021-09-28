@@ -33,6 +33,16 @@ describe("Thermostat", function(){
 		expect(thermostat.maxTemp).toEqual(32);
   });
 
+  it("should be able to reset to 20 degrees", function(){
+    thermostat.up()
+		thermostat.reset();
+		expect(thermostat.temperature).toEqual(20);
+  });
+
+  it("should show the energy usage levels", function(){
+		expect(thermostat.energyUsage).toMatch("medium-usage");
+  });
+
 
 }); 
 
