@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Thermostat</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="../resources/styles.css">
+		<script src="https://kit.fontawesome.com/65db07c83e.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="thermo-circle">
+				<div class="thermo-circle-row1">
+					<h2>Thermostat</h2>
+				</div>
+				<div class="thermo-circle-row2">
+					<div class="temp-monitor" id="tempMonitor"></div>
+					<div class="temp-options">
+						<button id="btnUp" class="btn"><i id="btnUpIcon" class="fas fa-arrow-circle-up fa-2x"></i></button>
+						<button id="btnEnergySave" class="btn"><i id="btnEnergyIcon" class="fas fa-bolt fa-2x"></i></button>
+						<button id="btnDown" class="btn"><i id="btnDownIcon" class="fas fa-arrow-circle-down fa-2x"></i></button>
+						<button id="btnReset" class="btn"><i id="btnResetIcon" class="fas fa-sync fa-2x"></i></button>
+					</div>
+				</div>
+				<div class="thermo-circle-row3">
+					<div class="thermo-usage-indicator" id="usageIndicator"></div>
+				</div>
+			</div>
+		</div>
+		<script src="../src/thermostat.js" type="application/javascript"></script>
+		<script src="../src/domFeatures.js" type="application/javascript"></script>
+	</body>
+</html>

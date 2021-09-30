@@ -2,9 +2,10 @@ describe("Thermostat", function(){
   var thermostat
   beforeEach(function() {
     thermostat = new Thermostat();
-  })
-  it("should be set at 20 degrees", function(){
-		expect(thermostat.temperature).toEqual(20)
+  });
+
+  it("should default to 20 degrees", function(){
+		expect(thermostat.getCurrentTemp()).toEqual(20)
   });
 	
 	it("should increase the temperature", function(){
@@ -40,7 +41,7 @@ describe("Thermostat", function(){
   });
 
   it("should show the energy usage levels", function(){
-		expect(thermostat.energyUsage).toMatch("medium-usage");
+		expect(thermostat.usage).toEqual("medium-usage");
   });
 
 

@@ -1,14 +1,27 @@
 class Thermostat {
 
   constructor(){ 
-	this.temperature = 20;
-	this.MIN_TEMP = 10;
-	this.maxTemp = 25;
-	this.powerSave = true;
+		this.temperature = 20;
+		this.MIN_TEMP = 10;
+		this.maxTemp = 25;
+		this.powerSave = true;
+		this.usage = "medium-usage"
 
   }
+
+	getCurrentTemp(){
+		if(this.temperature > this.maxTemp){
+			this.temperature = this.maxTemp;
+			return this.temperature;
+		}else{
+			return this.temperature;
+		}
+	}
+
 	up(){
-		this.temperature = this.temperature + 1;
+		if(this.temperature < this.maxTemp){
+			this.temperature = this.temperature + 1;
+		}
 	}
 
 	down(){
@@ -18,12 +31,16 @@ class Thermostat {
 	}
 
 	switchPowerSave(){
-		if (this.powerSave == true){
-			this.powerSave = false;
-			this.maxTemp = 32;
-		}else{
-			this.powerSave = true;
-			this.maxTemp = 25;
+		
+		switch(this.powerSave){
+			case true:
+				this.powerSave = false;
+				this.maxTemp = 32;
+				break;
+			case false:
+				this.powerSave = true;
+				this.maxTemp = 25;
+				break;
 		}
 	}
 
@@ -33,11 +50,14 @@ class Thermostat {
 
 	energyUsage(){
 		if (this.temperature < 18 ) {
-			return "low-usage";
+			this.usage = "low-usage";
+			return this.usage;
 		}else if (this.temperature <= 25 ) {
-			return "medium-usage";
+			this.usage = "medium-usage";
+			return this.usage;
 		}else{
-			return "high-usage";
+			this.usage = "high-usage";
+			return this.usage;
 		}
 	}
 }
