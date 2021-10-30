@@ -19,7 +19,7 @@ function renderResponse(responseData){
 let cityInput = document.getElementById('cityName');
 cityInput.addEventListener("change", (e) =>{
 	const cityName = e.target.value;
-	const weatherAPIKey = '2c4642d2d77ebdccb8ca6984c1a349b2'
+	const weatherAPIKey = 2c4642d2d77ebdccb8ca6984c1a349b2
 	const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${weatherAPIKey}`
 
 	getWeatherData(url).then(response =>{
