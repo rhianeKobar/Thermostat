@@ -12,13 +12,15 @@ body{
 	background-repeat: no-repeat;
 	height:100vh;
 }
+
 .container{
 	padding:2%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	
+	justify-items: center;
+	height: 100vh;
 }
 
 .thermo-circle{
@@ -30,6 +32,7 @@ body{
 	width: 400px;
 	height: 400px;
 	align-items: center;
+	box-shadow: 10px 10px 4px rgba(216, 209, 209, 0.25);
 }
 .thermo-circle-row1{
 	grid-row: 1/2;
@@ -51,8 +54,8 @@ body{
 	background-color: black;
 	margin:30%;
 	border:2px solid gray;
-	font-size: 4em;
-	padding-top: 25px;
+	font-size: 2.3em;
+	padding-top: 40px;
 }
 .temp-options{
 	grid-column: 2/3;
@@ -93,4 +96,27 @@ body{
 	height: 25px;
 	border-radius: 50%;
 	background: radial-gradient(50% 50% at 50% 50%, #77736C 1.04%, #000000 63.54%);
+}
+
+.input_city{
+	border: 1px solid #F0F8FF;
+	background-color: transparent;
+	box-sizing: border-box;
+	border-radius: 10px;
+	width: 200px;
+	height: 30px;	
+	text-align: center;
+}
+
+#weatherResults{
+	padding-top: 20px;
+	text-align: center;
+}
+
+.weather-block{
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: center;
+	align-items: center;
+	justify-items: center;
 }
