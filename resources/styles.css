@@ -112,6 +112,10 @@ body{
 	text-align: center;
 }
 
+#weatherResults{
+	padding-top: 20px;
+	text-align: center;
+}
 
 .weather-block{
 	display: grid;

@@ -1,3 +1,4 @@
+
 //declare class instance
 
 let thermostat = new Thermostat();
