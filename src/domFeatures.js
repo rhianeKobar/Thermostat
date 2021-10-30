@@ -11,34 +11,47 @@ let btnEnergySave = document.getElementById('btnEnergySave')
 let btnReset = document.getElementById('btnReset')
 let usageIndicator = document.getElementById('usageIndicator')
 let energyIcon = document.getElementById('btnEnergyIcon')
+let cityName = document.getElementById('cityName');
 
 
 //event functions
 
 let currentTemp = () => {
-	tempMonitor.innerText = thermostat.getCurrentTemp();
+	cityName.value = ""
+	energyIcon.style.color = 'aliceblue';
+	tempMonitor.innerHTML = `${thermostat.getCurrentTemp()}&#176;C`;
 }
+
+
 let increaseTemp = () => {
 	thermostat.up();
-	tempMonitor.innerText = thermostat.getCurrentTemp();
+	tempMonitor.innerHTML = `${thermostat.getCurrentTemp()}&#176;C`;
 }
+
+
 let decreaseTemp = () => {
 	thermostat.down();
-	tempMonitor.innerText = thermostat.getCurrentTemp();
+	tempMonitor.innerHTML = `${thermostat.getCurrentTemp()}&#176;C`;
 }
+
+
 let switchPowerSaver = () => {
-	if (energyIcon.style.color === 'black'){
+	thermostat.switchPowerSave();
+	if (thermostat.powerSave == true){
 		energyIcon.style.color = 'aliceblue';
-	}else{
+	}else if(thermostat.powerSave == false){
 		energyIcon.style.color = 'black';
 	}
-	thermostat.switchPowerSave();
-	tempMonitor.innerText = thermostat.getCurrentTemp();
+	tempMonitor.innerHTML = `${thermostat.getCurrentTemp()}&#176;C`;
 }
+
+
 let resetTemp = () => {
 	thermostat.reset();
-	tempMonitor.innerText = thermostat.getCurrentTemp();
+	tempMonitor.innerHTML = `${thermostat.getCurrentTemp()}&#176;C`;
 }
+
+
 let  changeIndication = () => {
 	thermostat.energyUsage();
 	if(thermostat.energyUsage() ===  "low-usage") {

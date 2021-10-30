@@ -14,6 +14,10 @@
 	</head>
 	<body>
 		<div class="container">
+			<div class="weather-block">
+				<input type="search" placeholder="Enter city" onsearch="weatherData" class="input_city" id="cityName">
+				<div id="weatherResults"></div>
+			</div>
 			<div class="thermo-circle">
 				<div class="thermo-circle-row1">
 					<h2>Thermostat</h2>
@@ -32,6 +36,7 @@
 				</div>
 			</div>
 		</div>
+		<script src="../src/apiCall.js" type="application/javascript"></script>
 		<script src="../src/thermostat.js" type="application/javascript"></script>
 		<script src="../src/domFeatures.js" type="application/javascript"></script>
 	</body>
